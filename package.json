@@ -1,0 +1,28 @@
+{
+  "name": "write-file-action",
+  "version": "1.0.0",
+  "description": "A GitHub action to write a file.",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamianReeves/write-file-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/DamianReeves/write-file-action/issues"
+  },
+  "homepage": "https://github.com/DamianReeves/write-file-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/io": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "@zeit/ncc": "^0.22.1"
+  }
+}
