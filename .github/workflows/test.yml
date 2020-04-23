@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: DamianReeves/write-file-action@master
         with:
-          path: ${{ env.home}}/.bashrc
+          path: ${{ env.HOME}}/.bashrc
           contents: |
             echo "Hello World!"
           write-mode: append
