@@ -1,0 +1,26 @@
+name: "Write File"
+author: "Damian Reeves"
+description: "Write a file."
+inputs:
+  path: # id of input
+    description: "The path to the file to write"
+    required: true
+
+  contents:
+    description: "The contents of the file"
+    required: true
+
+  write-mode:
+    description: "The mode of writing to use: `overwrite`, `append`, or `preserve`."
+    required: false
+    default: preserve
+outputs:
+  size:
+    description: "The returned size"
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
+branding:
+  icon: "package"
+  color: "gray-dark"
