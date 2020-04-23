@@ -11,13 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: set .bashrc path
+        shell: pwsh
+        run: echo "::set-env name=BASHRC_PATH::$Env:HOME/.bashrc"
+      - name: echo .bashrc path
+        shell: pwsh
+        run: echo "$env:BASHRC_PATH"
       - uses: DamianReeves/write-file-action@master
         with:
-          path: $HOME/.bashrc
+          path: ${{ env.BASHRC_PATH }}
           contents: |
             echo "Hello World!"
           write-mode: append
       - uses: actions/upload-artifact@v1
         with:
           name: profile
-          path: ${{ env.home}}/.bashrc
+          path: ${{ env.BASHRC_PATH }}
