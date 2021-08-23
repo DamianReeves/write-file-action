@@ -37,6 +37,6 @@ uses: DamianReeves/write-file-action
 with:
   path: ${{ env.home}}/.bashrc
   contents: |
-    echo "Hello World!"
+    Hello World!
   write-mode: append
 ```
