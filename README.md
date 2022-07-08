@@ -58,7 +58,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Overwrite file
-        uses: "DamianReeves/write-file-action@v1.0"
+        uses: "DamianReeves/write-file-action@master"
         with:
           path: path/to/file.js
           write-mode: overwrite
