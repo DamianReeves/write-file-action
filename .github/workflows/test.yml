@@ -19,7 +19,7 @@ jobs:
           path: ci/test-output/out.js
           write-mode: overwrite
           contents: |
-            console.log('some contents')
+            console.log('some contents: ${{github.ref_name}}')
             
       - name: Commit & Push
         uses: Andro999b/push@v1.3
