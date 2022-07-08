@@ -16,7 +16,7 @@ jobs:
       - name: Overwrite file
         uses: "DamianReeves/write-file-action@master"
         with:
-          path: test/out/out.js
+          path: ci/test-output/out.js
           write-mode: overwrite
           contents: |
             console.log('some contents')
@@ -25,6 +25,6 @@ jobs:
         uses: Andro999b/push@v1.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          branch: master
           force: true
           message: 'Overwritten by Github Actions - ${date}'
