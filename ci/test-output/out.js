@@ -1,1 +1,1 @@
-console.log('some contents')
+console.log('some contents: 12/merge')
