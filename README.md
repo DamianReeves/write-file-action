@@ -40,3 +40,36 @@ with:
     echo "Hello World!"
   write-mode: append
 ```
+
+## Example usage with checkout, commit and push
+```yaml
+name: Overwrite some file
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Overwrite file
+        uses: "DamianReeves/write-file-action@v1.0"
+        with:
+          path: path/to/file.js
+          write-mode: overwrite
+          contents: |
+            console.log('some contents')
+            
+      - name: Commit & Push
+        uses: Andro999b/push@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
+          message: 'Overwritten by Github Actions - ${date}'
+```
