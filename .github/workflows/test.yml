@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: set .bashrc path
         shell: pwsh
-        run: echo "::set-env name=BASHRC_PATH::$Env:HOME/.bashrc"
+        run: echo "{BASHRC_PATH}=$Env:HOME/.bashrc"  >> $GITHUB_ENV
       - name: echo .bashrc path
         shell: pwsh
         run: echo "$env:BASHRC_PATH"
