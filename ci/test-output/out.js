@@ -1,1 +1,1 @@
-console.log('some contents: master')
+console.log('some contents: 18/merge')
