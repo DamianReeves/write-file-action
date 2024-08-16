@@ -1,0 +1,18 @@
+# See https://github.com/typesafegithub/github-actions-typing/
+inputs:
+  path:
+    type: string
+
+  contents:
+    type: string
+
+  write-mode:
+    type: enum
+    allowed-values:
+      - overwrite
+      - append
+      - preserve
+
+outputs:
+  size:
+    type: integer
